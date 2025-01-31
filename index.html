@@ -14,9 +14,8 @@
 
         <script>
             async function fetchStudentData() {
-                const response = await fetch('https://display-students-count1.azurewebsites.net/api/http_trigger1?code=ImnBpDsEHIfgU4ZOhRFzA_JmJ3p2xkN5ZULsJWASYVZqAzFuIlz9Qg%3D%3D');
+                const response = await fetch('https://display-student-count.azurewebsites.net/api/HttpTrigger1?code=9Mpw1V38Uw_Y1FITfx7_B1tnjAM4FbCCAE9WwywqtcGiAzFuxhVKbw%3D%3D');
                 const data = await response.json();
-                console.log(data)
                 const tableBody = document.querySelector('#studentTable tbody');
                 tableBody.innerHTML = data.map(row => 
                 `<tr><td>${row.Country}</td><td>${row.StudentCount}</td></tr>`).join('');
@@ -25,5 +24,3 @@
         </script>
     </body>
 </html>
-
-<!-- https://ashy-coast-060b7380f.4.azurestaticapps.net -->
