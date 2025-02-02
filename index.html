@@ -32,7 +32,8 @@
 
         <script>
             async function fetchStudentData() {
-                const response = await fetch('https://display-student-count.azurewebsites.net/api/HttpTrigger1?code=9Mpw1V38Uw_Y1FITfx7_B1tnjAM4FbCCAE9WwywqtcGiAzFuxhVKbw%3D%3D');
+                // const response = await fetch('https://display-student-count.azurewebsites.net/api/HttpTrigger1?code=9Mpw1V38Uw_Y1FITfx7_B1tnjAM4FbCCAE9WwywqtcGiAzFuxhVKbw%3D%3D');
+                const response = await fetch('https://displau-student-count-new.azurewebsites.net/api/HttpTrigger1?code=Wk2_5Ob4iXmoRF0Y6u-V8P60zBB22yphP-hAT6qbatc-AzFuKVmspg%3D%3D');
                 const data = await response.json();
                 const tableBody = document.querySelector('#studentTable tbody');
                 tableBody.innerHTML = data.map(row => 
